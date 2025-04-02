@@ -1,7 +1,7 @@
 [project]
 name = "mythesis-chatbot"
 version = "0.1.0"
-description = ""
+description = "A chatbot that will answer questions about my thesis."
 authors = [
     {name = "Léonard Pasi",email = "leonardpasi@gmail.com"}
 ]
@@ -16,9 +16,6 @@ dependencies = [
 [tool.poetry]
 packages = [{include = "mythesis_chatbot", from = "src"}]
 
-
-[tool.poetry.group.dev.dependencies]
-poetry-plugin-dotenv = "^2.9.0"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
