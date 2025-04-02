@@ -1,0 +1,25 @@
+[project]
+name = "mythesis-chatbot"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Léonard Pasi",email = "leonardpasi@gmail.com"}
+]
+readme = "README.md"
+requires-python = "^3.10"
+dependencies = [
+    "trulens (>=1.4.7,<2.0.0)",
+    "llama-index (>=0.12.28,<0.13.0)",
+    "pandas (>=2.2.3,<3.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "mythesis_chatbot", from = "src"}]
+
+
+[tool.poetry.group.dev.dependencies]
+poetry-plugin-dotenv = "^2.9.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
