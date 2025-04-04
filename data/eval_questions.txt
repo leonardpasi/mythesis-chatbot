@@ -1,0 +1,17 @@
+What were the consequences of homo sapiens arrival in Australia and South America?
+What do we know about changes in insect species diversity?
+Who developed the first automated system to monitor moths?
+Why are the localization and classification modules separate?
+How is the object detection model evaluated?
+How is the object detector's threshold chosen?
+What observation supported the work on training data for object detection?
+What was the risk with synthesizing training data with SAM?
+How are the moths segmented with SAM reviewed?
+What are the final results of the work on the localization module?
+What is active learning?
+What are different types of uncertainty?
+Which uncertainty should active learning techniques estimate and why?
+How can epistemic uncertainty be estimated in deep learning?
+What is the procedure to evaluate an active learning technique?
+What is mutual information?
+What are the conclusions of the work on active learning?
