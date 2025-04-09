@@ -22,9 +22,6 @@ repos:
     - id: name-tests-test
       description: This verifies that test files are named correctly - test* format (prefix and not suffix)
       args: ["--pytest-test-first"]
-    - id: no-commit-to-branch
-      args: [-b, deploy]
-      description: Don't commit to branch deploy.
     - id: trailing-whitespace
       args: ["--markdown-linebreak-ext=md"]
       description: This hook trims trailing whitespace.
