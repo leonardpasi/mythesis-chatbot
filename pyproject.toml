@@ -1,7 +1,7 @@
 [project]
 name = "mythesis-chatbot"
 version = "0.1.0"
-description = "A chatbot that will answer questions about my thesis."
+description = "RAG chatbot trained on my master thesis."
 authors = [
     {name = "Léonard Pasi",email = "leonardpasi@gmail.com"}
 ]
@@ -14,7 +14,10 @@ dependencies = [
     "isort (>=6.0.1,<7.0.0)",
     "black (>=25.1.0,<26.0.0)",
     "flake8 (>=7.2.0,<8.0.0)",
-    "llama-index-embeddings-huggingface (>=0.5.2,<0.6.0)"
+    "llama-index-embeddings-huggingface (>=0.5.2,<0.6.0)",
+    "trulens-providers-openai (>=1.4.8,<2.0.0)",
+    "trulens-apps-llamaindex (>=1.4.8,<2.0.0)",
+    "pre-commit (>=4.2.0,<5.0.0)"
 ]
 
 [tool.poetry]
@@ -35,6 +38,10 @@ exclude = '''
 )/
 '''
 
+[tool.isort]
+profile="black"
+known_first_party=[mythesis_chatbot]
+known_third_party=[llamaindex, trulens]
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]

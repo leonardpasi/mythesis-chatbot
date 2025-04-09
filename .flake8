@@ -4,4 +4,4 @@ max-line-length = 88 # matches black's default
 docstring-convention = numpy
 per-file-ignores =
     __init__.py:F401
-exclude = .git, __pycache__
+exclude = .git, __pycache__, .venv
