@@ -40,8 +40,8 @@ exclude = '''
 
 [tool.isort]
 profile="black"
-known_first_party=[mythesis_chatbot]
-known_third_party=[llamaindex, trulens]
+known_first_party=["mythesis_chatbot"]
+known_third_party=["llamaindex", "trulens"]
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
