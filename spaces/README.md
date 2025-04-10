@@ -9,4 +9,5 @@ app_file: app.py
 pinned: false
 short_description: RAG chatbot trained on my master thesis.
 ---
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+
+This is a private demo using my own OpenAI API key. Please use responsibly.

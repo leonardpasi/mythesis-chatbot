@@ -27,7 +27,7 @@ from llama_index.llms.openai import OpenAI
 
 from mythesis_chatbot.utils import get_config_hash, get_openai_api_key
 
-SupportedRags = Literal["basic", "sentence_window", "auto_merging"]
+SupportedRags = Literal["basic", "sentence window retrieval", "auto-merging retrieval"]
 SupportedOpenAIllms = Literal["gpt-4o-mini", "gpt-3.5-turbo"]
 SupportedEmbedModels = Literal["BAAI/bge-small-en-v1.5"]
 SupportedRerankModels = Literal["cross-encoder/ms-marco-MiniLM-L-2-v2"]
@@ -165,7 +165,7 @@ def sentence_window_retrieval_setup(
     embed_model: SupportedEmbedModels = "BAAI/bge-small-en-v1.5",
     sentence_window_size: int = 3,
     similarity_top_k: int = 6,
-    rerank_model: str = "cross-encoder/ms-marco-MiniLM-L-2-v2",
+    rerank_model: SupportedRerankModels = "cross-encoder/ms-marco-MiniLM-L-2-v2",
     rerank_top_n: int = 2,
 ):
 
@@ -202,7 +202,7 @@ def automerging_retrieval_setup(
     embed_model: SupportedEmbedModels = "BAAI/bge-small-en-v1.5",
     chunk_sizes=[2048, 512, 128],
     similarity_top_k: int = 6,
-    rerank_model: str = "cross-encoder/ms-marco-MiniLM-L-2-v2",
+    rerank_model: SupportedRerankModels = "cross-encoder/ms-marco-MiniLM-L-2-v2",
     rerank_top_n: int = 2,
 ):
     openai.api_key = get_openai_api_key()
@@ -237,7 +237,7 @@ def basic_rag_setup(
     temperature: float = 0.1,
     embed_model: SupportedEmbedModels = "BAAI/bge-small-en-v1.5",
     similarity_top_k: int = 6,
-    rerank_model: str = "cross-encoder/ms-marco-MiniLM-L-2-v2",
+    rerank_model: SupportedRerankModels = "cross-encoder/ms-marco-MiniLM-L-2-v2",
     rerank_top_n: int = 2,
 ):
     openai.api_key = get_openai_api_key()

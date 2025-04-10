@@ -14,6 +14,7 @@ dependencies = [
     "llama-index-embeddings-huggingface (>=0.5.2,<0.6.0)",
     "trulens-providers-openai (>=1.4.8,<2.0.0)",
     "trulens-apps-llamaindex (>=1.4.8,<2.0.0)",
+    "gradio (==5.24.0)",
 ]
 
 [tool.poetry]
