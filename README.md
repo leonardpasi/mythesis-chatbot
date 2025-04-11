@@ -5,7 +5,7 @@ colorFrom: indigo
 colorTo: indigo
 sdk: gradio
 sdk_version: 5.24.0
-app_file: app.py
+app_file: scripts/app.py
 pinned: false
 short_description: RAG chatbot trained on my master thesis.
 ---
