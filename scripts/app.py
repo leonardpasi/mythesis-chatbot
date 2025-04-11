@@ -54,7 +54,7 @@ def chat_bot(query: str, rag_mode: SupportedRags) -> str:
 
 default_message = (
     "Ask a about a topic that is discussed in my master thesis."
-    "E.g., what is epistemic uncertainty?"
+    " E.g., what is epistemic uncertainty?"
 )
 
 gradio_app = gr.Interface(
