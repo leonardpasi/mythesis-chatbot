@@ -1,6 +1,6 @@
 import gradio as gr
 
-from mythesis_chatbot.rag_setup import (
+from src.mythesis_chatbot.rag_setup import (
     SupportedRags,
     automerging_retrieval_setup,
     basic_rag_setup,
