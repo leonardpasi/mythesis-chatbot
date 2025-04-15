@@ -6,11 +6,13 @@ from trulens.apps.llamaindex import TruLlama
 from trulens.core import Feedback
 from trulens.providers.openai import OpenAI
 
+from mythesis_chatbot.utils import get_config_hash
+
 
 def run_evals(eval_questions_path: Path, tru_recorder, query_engine):
 
     eval_questions = []
-    with open(eval_questions_path, "r") as file:
+    with open(eval_questions_path) as file:
         for line in file:
             item = line.strip()
             eval_questions.append(item)
@@ -55,10 +57,17 @@ def f_groundedness(
     )
 
 
-def get_prebuilt_trulens_recorder(query_engine, app_id: str):
+def get_prebuilt_trulens_recorder(
+    query_engine, query_engine_config: dict[str, str | int]
+):
+    app_name = query_engine_config["rag_mode"]
+    app_version = get_config_hash(query_engine_config)
+
     tru_recorder = TruLlama(
         query_engine,
-        app_id=app_id,
+        app_name=app_name,
+        app_version=app_version,
+        metadata=query_engine_config,
         feedbacks=[f_answer_relevance(), f_context_relevance(), f_groundedness()],
     )
     return tru_recorder

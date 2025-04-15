@@ -27,7 +27,9 @@ from llama_index.llms.openai import OpenAI
 
 from mythesis_chatbot.utils import get_config_hash, get_openai_api_key
 
-SupportedRags = Literal["basic", "sentence window retrieval", "auto-merging retrieval"]
+SupportedRags = Literal[
+    "classic retrieval", "sentence window retrieval", "auto-merging retrieval"
+]
 SupportedOpenAIllms = Literal["gpt-4o-mini", "gpt-3.5-turbo"]
 SupportedEmbedModels = Literal["BAAI/bge-small-en-v1.5"]
 SupportedRerankModels = Literal["cross-encoder/ms-marco-MiniLM-L-2-v2"]
@@ -167,6 +169,7 @@ def sentence_window_retrieval_setup(
     similarity_top_k: int = 6,
     rerank_model: SupportedRerankModels = "cross-encoder/ms-marco-MiniLM-L-2-v2",
     rerank_top_n: int = 2,
+    **kwargs
 ):
 
     openai.api_key = get_openai_api_key()
@@ -204,6 +207,7 @@ def automerging_retrieval_setup(
     similarity_top_k: int = 6,
     rerank_model: SupportedRerankModels = "cross-encoder/ms-marco-MiniLM-L-2-v2",
     rerank_top_n: int = 2,
+    **kwargs
 ):
     openai.api_key = get_openai_api_key()
 
@@ -239,6 +243,7 @@ def basic_rag_setup(
     similarity_top_k: int = 6,
     rerank_model: SupportedRerankModels = "cross-encoder/ms-marco-MiniLM-L-2-v2",
     rerank_top_n: int = 2,
+    **kwargs
 ):
     openai.api_key = get_openai_api_key()
 

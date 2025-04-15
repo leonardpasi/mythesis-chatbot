@@ -10,4 +10,4 @@ pinned: false
 short_description: RAG chatbot trained on my master thesis.
 ---
 
-This is a private demo using my own OpenAI API key. Please use responsibly.
+Check out the [GitHub repo](https://github.com/leonardpasi/mythesis-chatbot)!
