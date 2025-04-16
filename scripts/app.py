@@ -5,7 +5,6 @@ import gradio as gr
 import nest_asyncio
 import yaml
 from trulens.core import TruSession
-from trulens.dashboard import run_dashboard
 
 from src.mythesis_chatbot.evaluation import get_prebuilt_trulens_recorder
 from src.mythesis_chatbot.rag_setup import (
@@ -24,7 +23,6 @@ welcome_message_path = Path(__file__).parents[1] / "spaces/welcome_message.md"
 nest_asyncio.apply()
 
 tru = TruSession(database_url=os.getenv("SUPABASE_CONNECTION_STRING"))
-run_dashboard(tru)
 
 
 class ChatBot:
