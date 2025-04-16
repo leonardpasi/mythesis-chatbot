@@ -25,7 +25,7 @@ from llama_index.core.retrievers import AutoMergingRetriever
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.llms.openai import OpenAI
 
-from mythesis_chatbot.utils import get_config_hash, get_openai_api_key
+from src.mythesis_chatbot.utils import get_config_hash, get_openai_api_key
 
 SupportedRags = Literal[
     "classic retrieval", "sentence window retrieval", "auto-merging retrieval"
