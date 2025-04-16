@@ -30,7 +30,7 @@ from src.mythesis_chatbot.utils import get_config_hash, get_openai_api_key
 SupportedRags = Literal[
     "classic retrieval", "sentence window retrieval", "auto-merging retrieval"
 ]
-SupportedOpenAIllms = Literal["gpt-4o-mini", "gpt-3.5-turbo"]
+SupportedOpenAIllms = Literal["gpt-4.1-nano", "gpt-4o-mini", "gpt-3.5-turbo"]
 SupportedEmbedModels = Literal["BAAI/bge-small-en-v1.5"]
 SupportedRerankModels = Literal["cross-encoder/ms-marco-MiniLM-L-2-v2"]
 
