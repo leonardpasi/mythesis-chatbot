@@ -6,7 +6,7 @@ from trulens.apps.llamaindex import TruLlama
 from trulens.core import Feedback
 from trulens.providers.openai import OpenAI
 
-from mythesis_chatbot.utils import get_config_hash
+from src.mythesis_chatbot.utils import get_config_hash
 
 
 def run_evals(eval_questions_path: Path, tru_recorder, query_engine):
