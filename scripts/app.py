@@ -1,4 +1,3 @@
-# %%
 import os
 from pathlib import Path
 
@@ -129,5 +128,4 @@ gradio_app = gr.Interface(
     description=description,
 )
 
-# %%
 gradio_app.launch()
