@@ -28,6 +28,21 @@ flake8 = "^7.2.0"
 black = "^25.1.0"
 isort = "^6.0.1"
 ipykernel = "^6.29.5"
+flake8-pyproject = "^1.2.3"
+
+[tool.flake8]
+ignore = ['E203', 'W503']
+max-line-length = 88
+docstring-convention = 'numpy'
+per-file-ignores = [
+    '__init__.py:F401',
+]
+exclude = [
+    '.git',
+    '__pycache__',
+    '.venv',
+    'data/indices',
+]
 
 [tool.black]
 line-length = 88
