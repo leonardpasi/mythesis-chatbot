@@ -22,7 +22,7 @@ welcome_message_path = Path(__file__).parents[1] / "spaces/welcome_message.md"
 # Enables running async code inside an existing event loop without crashing.
 nest_asyncio.apply()
 
-tru = TruSession(database_url=os.getenv("SUPABASE_CONNECTION_STRING"))
+tru = TruSession(database_url=os.getenv("SUPABASE_PROD_CONNECTION_STRING_IPV4"))
 
 
 class ChatBot:
