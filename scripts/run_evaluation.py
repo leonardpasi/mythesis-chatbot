@@ -31,14 +31,14 @@ from src.mythesis_chatbot.rag_setup import (  # NOQA E402
 )
 
 nest_asyncio.apply()
-tru = TruSession(database_url=os.getenv("SUPABASE_CONNECTION_STRING"))
+tru = TruSession(database_url=os.getenv("SUPABASE_DEV_CONNECTION_STRING_IPV4"))
 
 # %%
 run_dashboard(tru)
 
 # %%
 
-rag_mode: SupportedRags = "classic retrieval"
+rag_mode: SupportedRags = "auto-merging retrieval"
 
 input_file = project_root_path / "data/Master_Thesis.pdf"
 save_dir = project_root_path / "data/indices/"
