@@ -112,7 +112,7 @@ with open(welcome_message_path, encoding="utf-8") as f:
 gradio_app = gr.Interface(
     fn=chat_bot,
     inputs=[
-        gr.Textbox(placeholder=default_message, label="Query"),
+        gr.Textbox(placeholder=default_message, label="Query", lines=2),
         gr.Dropdown(
             choices=SupportedRags.__args__,
             label="RAG mode",
