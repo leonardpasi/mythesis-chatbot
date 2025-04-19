@@ -17,14 +17,15 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-      - name: Install Poetry
+      - name: Install Poetry and export plugin
         run: |
           curl -sSL https://install.python-poetry.org | python3 -
           echo "$HOME/.local/bin" >> $GITHUB_PATH  # Add Poetry to PATH
+          poetry self add poetry-plugin-export
 
       - name: Generate requirements.txt
         run: |
-          poetry export -format requirements.txt --output spaces/requirements.txt --without-hashes
+          poetry export --format requirements.txt --output spaces/requirements.txt --without-hashes
 
       - name: Switch to deploy branch
         run: |
