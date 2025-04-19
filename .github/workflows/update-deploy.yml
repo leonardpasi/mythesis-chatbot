@@ -17,6 +17,11 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
+      - name: Install Poetry
+        run: |
+          curl -sSL https://install.python-poetry.org | python3 -
+          echo "$HOME/.local/bin" >> $GITHUB_PATH  # Add Poetry to PATH
+
       - name: Generate requirements.txt
         run: |
           poetry export -format requirements.txt --output spaces/requirements.txt --without-hashes
