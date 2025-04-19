@@ -11,7 +11,7 @@ Here you get to choose between three RAG techniques:
 - **auto-merging retrieval**
 
 Feel free to experiment with different modes! Note that a little extra delay is to be expected when switching to another mode.
-Also, note that all your queries (as well as system responses) are automatically logged on a remote PostgreSQL database for continuous monitoring of the deployed systems.
+Also, note that all your queries (as well as system responses, and evaluation of these responses) are automatically logged on a remote PostgreSQL database for continuous monitoring of the deployed systems.
 
 Each of these systems has been optimized for performance by doing a grid search on the
 relevant parameters. Performance is quantified with five metrics:
