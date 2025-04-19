@@ -29,6 +29,7 @@ jobs:
 
       - name: Switch to deploy branch
         run: |
+          git fetch origin
           git switch deploy
 
       - name: Updated deploy branch
