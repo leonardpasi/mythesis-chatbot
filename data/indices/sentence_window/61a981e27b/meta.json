@@ -1,5 +1,0 @@
-{
-  "doc_source": "Master_Thesis.pdf",
-  "embed_model": "BAAI/bge-small-en-v1.5",
-  "sentence_window_size": 3
-}
