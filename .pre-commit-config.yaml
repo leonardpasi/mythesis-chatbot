@@ -1,5 +1,5 @@
 default_language_version:
-    python: python3.10
+    python: python3.12
 
 repos:
 - repo: https://github.com/pre-commit/pre-commit-hooks
@@ -30,7 +30,7 @@ repos:
   rev: v3.19.1
   hooks:
   - id: pyupgrade
-    args: [--py310-plus]
+    args: [--py312-plus]
 
 # Pre-commit is installed by poetry alongside black, isort, flake8
 - repo: local
