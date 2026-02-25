@@ -4,6 +4,7 @@ from pathlib import Path
 import gradio as gr
 import nest_asyncio
 import yaml
+from sqlalchemy.exc import OperationalError
 from trulens.core import TruSession
 
 from src.mythesis_chatbot.evaluation import get_prebuilt_trulens_recorder
@@ -22,7 +23,11 @@ welcome_message_path = Path(__file__).parents[1] / "spaces/welcome_message.md"
 # Enables running async code inside an existing event loop without crashing.
 nest_asyncio.apply()
 
-tru = TruSession(database_url=os.getenv("SUPABASE_PROD_CONNECTION_STRING_IPV4"))
+try:
+    tru = TruSession(database_url=os.getenv("SUPABASE_PROD_CONNECTION_STRING_IPV4"))
+except OperationalError:
+    print("Could not connect to Supabase, falling back to local SQLite database.")
+    tru = TruSession()
 
 
 class ChatBot:
